@@ -36,6 +36,10 @@ int main() {
 
 
     }
+    delete []name;
+    delete []roll;
+    delete []age;
+    
     return 1;
 
 }
