@@ -4,24 +4,38 @@
 using namespace std;
 
 int main() {
+    int n;
+    int *roll, *age;
+    char *name[15];
+    cout<<"How many Student data to enter?"<<endl;
+    cin>>n;
+    roll= new int[n];
+    age = new int[n];
+    name[15]=new char[n];
+    cout<<"Enter data"<<endl;
+    for (int i=0;i<n;i++){
+            cout<<"Enter roll number of student"<<endl;
+    cin>>roll[i];
+    cout<<"Enter name of student"<<endl;
+    cin>>name[i];
+    cout<<"Enter age of student"<<endl;
+    cin>>age[i];
 
-    const int Width     = 20;
+    }
+    for(int i=0;i<n;i++){
 
-    cout << left << setw(Width) << "S.N";
-    cout << left << setw(Width) << "Roll Number";
-    cout << left << setw(Width) << "Name";
-    cout << left << setw(Width) << "Age";
+    cout << left << setw(8) << "S.N";
+    cout << left << setw(15) << "Roll Number";
+    cout << left << setw(12) << "Name";
+    cout << left << setw(3) << "Age";
     cout << endl;
-    cout << left << setw(Width) << 1;
-    cout << left << setw(Width) << 101;
-    cout << left << setw(Width) << "Ram";
-    cout << left << setw(Width) << 25;
-    cout << endl;
-    cout << left << setw(Width) << 2;
-    cout << left << setw(Width) << 102;
-    cout << left << setw(Width) << "Sita";
-    cout << left << setw(Width) << "23";
-    cout << endl;
+    cout << left << setw(8) <<i+1;
+    cout << left <<setw(15) << roll[i];
+    cout << left <<setw(12) << name[i];
+    cout <<left<<setw(8) << age[i]<<endl;
 
+
+    }
+    return 1;
 
 }
